@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día del Odontólogo, Catherine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin: 20px;
+        }
+
+        .container {
+            position: relative;
+            margin: 20px;
+        }
+
+        .flowers img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .hearts {
+            margin-top: 20px;
+        }
+
+        .heart {
+            font-size: 2em;
+            margin: 5px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .heart:nth-child(odd) {
+            animation-duration: 2.5s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .tooth {
+            position: absolute;
+            width: 80px;
+            bottom: 10px;
+            animation: moveSide 5s linear infinite alternate;
+        }
+
+        .tooth-left { left: 5%; }
+        .tooth-right { right: 5%; }
+
+        @keyframes moveSide {
+            0% { transform: translateX(-20px); }
+            100% { transform: translateX(20px); }
+        }
+
+        .hidden-message {
+            display: none;
+            font-size: 1.5em;
+            color: #ff1493;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .flowers img {
+                max-width: 300px;
+            }
+
+            .tooth {
+                width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mp3">
+    </audio>
+    <button onclick="toggleMusic()">🎵 Reproducir/Pausar Música</button>
+
+    <script>
+        function toggleMusic() {
+            const audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+
+    <div class="container">
+        <h1>¡Feliz Día del Odontólogo, Mi Vida! 🦷💖</h1>
+        <p>Mi amor, hoy quiero recordarte lo increíble que eres y lo orgulloso que estoy de ti. Sé que serás una odontóloga espectacular. ¡Te amo! 💕</p>
+        <div class="flowers">
+            <img src="https://files.oaiusercontent.com/file-W4JyoARgvAQqDuTqAJJn1J?se=2025-02-09T06%3A59%3A59Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dbef9824a-63e1-42f1-93e2-5b22d573cec7.webp&sig=8hGfg5Eu6N0XPy//O3i69rTB7tIoKxiIej%2BA0IZJvG4%3D" alt="Flores coloridas">
+        </div>
+        <button onclick="showMessage()">💌 Toca aquí</button>
+        <p id="hidden-message" class="hidden-message">Eres la sonrisa más linda del mundo. 😘</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('hidden-message').style.display = 'block';
+        }
+    </script>
+
+    <div class="hearts">
+        <span class="heart">❤️</span>
+        <span class="heart">💖</span>
+        <span class="heart">💕</span>
+        <span class="heart">❤️</span>
+        <span class="heart">💖</span>
+    </div>
+
+    <img src="https://i.pinimg.com/564x/5c/3f/88/5c3f88019a54034d415730f87ce0f9e8.jpg" class="tooth tooth-left" alt="Diente izquierdo">
+    <img src="https://i.pinimg.com/736x/48/57/9c/48579c56202c653067cd738b026a482f.jpg" class="tooth tooth-right" alt="Diente derecho">
+</body>
+</html>
